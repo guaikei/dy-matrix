@@ -6,6 +6,11 @@ name: dy-matrix
 description: 抖音账号矩阵数据源（只读）：关键词搜索、博主作品、作品详情、评论、热榜。触发：抖音搜索、热搜、评论、需求挖掘、痛点、作品详情、博主作品、对标账号、播放量、选题、舆情、竞品。小红书、快手、B站、微博、公众号不要用本技能。sec_uid、aweme_id、douyin search、douyin hot、douyin detail、douyin comments。
 license: MIT
 version: 1.5.1
+display_name: "抖音账号矩阵｜多账号巡检·批量数据·横向对比·统一看板"
+display_name_en: "Douyin Matrix"
+description_zh: "抖音账号矩阵数据源（只读，无需登录你的抖音账号，不发布不点赞不评论，无风控封号问题）：对矩阵内多个账号逐个取公开数据，全部以结构化 JSON 输出，可汇总成统一看板或导入 Excel/BI 做横向对比。\n\n六类能力：①关键词搜索视频与图文，支持综合/最多点赞/最新排序及 1 天/7 天/半年时间范围；②用户与达人搜索，按关键词补全矩阵账号；③博主作品抓取，加 --limit 0 只取粉丝数/获赞数等互动数据；④单条作品详情：文案、播放、点赞、评论、收藏、分享、标签；⑤视频与图文评论抓取；⑥实时热榜约 50 条。\n\n矩阵口径：逐账号取同一字段，按账号分组对比粉丝、获赞、发布量与互动率，定位涨幅异常的账号。\n\n规模：按量 Token 单次最多 10000 条；包月视频/用户/作品最多 30 条、评论最多 50 条，超限返回 PLAN_LIMIT。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零依赖。"
+description_en: "Read-only Douyin account-matrix data source, no login, no ban risk. Run one command per account to get public Douyin data as structured JSON, then merge all accounts into one dashboard or Excel/BI sheet for direct comparison.\n\nCapabilities: 1) Keyword search over videos and image posts, sorted by relevance, likes or newest, with 1/7/180-day windows. 2) User and creator search to complete the matrix. 3) Creator post listing, plus interactions-only mode (--limit 0) for follower and like counts. 4) Post detail: caption, plays, likes, comments, collects, shares, tags. 5) Comment scraping for videos and image notes. 6) Real-time hot list of about 50 entries.\n\nMatrix workflow: pull the same fields for every account, group by account and compare followers, likes, posting volume and engagement to spot outliers.\n\nScale: pay-as-you-go up to 10,000 items per call; monthly plans cap search and posts at 30 items, comments at 50, then PLAN_LIMIT. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "🎬"
